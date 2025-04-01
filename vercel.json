@@ -1,7 +1,7 @@
 {
     "version":2,
     "name": "2TOR",
-    "build": [
+    "builds": [
         {
             "src":"server.js",
             "use":"@vercel/node"
@@ -9,9 +9,9 @@
     ],
     "routes":[
         {
-            "src":"(.*)",
+            "src":"/(.*)",
             "dest": "server.js",
-            "header": {
+            "headers": {
                 "Access-Control-Allow-Origin": "*"
             }
         }
